@@ -1,0 +1,53 @@
+.countdownClock {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  
+}
+
+.counter {
+  flex: 1;
+  padding: 5px
+}
+
+.counter h1 {
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.controls {
+  flex: 1;
+  display: flex;
+}
+
+.controls button {
+  outline: none;
+  display: block;
+  margin: 5px;
+  margin-bottom: 1rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  background-color: #004c8c;
+  box-shadow:0 0 5px #333;
+  color: whitesmoke;
+  transition: 0.2s;
+
+}
+
+.controls button:hover {
+  background-color: #0277bc;
+  box-shadow:0 0 7px #222;
+}
+
+.controls button:active {
+  background-color: #58a5ef;
+}
