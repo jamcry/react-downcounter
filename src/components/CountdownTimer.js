@@ -1,17 +1,17 @@
 import React from "react";
 import CounterControl from "./CounterControl";
 import CounterDisplay from "./CounterDisplay";
-import "./CountdownTimer.css"
+import "./CountdownTimer.css";
 export default class CountdownTimer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      secondsRemaining: parseInt(this.props.sec) || 10,
+      secondsRemaining: parseInt(this.props.seconds) || 10,
       textColor: ""
     };
-    this.startTimer = this.startTimer.bind(this)
-    this.stopTimer = this.stopTimer.bind(this)
-    this.resetTimer = this.resetTimer.bind(this)
+    this.startTimer = this.startTimer.bind(this);
+    this.stopTimer = this.stopTimer.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
     this.tick = this.tick.bind(this);
   }
 
@@ -25,7 +25,7 @@ export default class CountdownTimer extends React.Component {
 
   resetTimer() {
     this.stopTimer();
-    this.setState({secondsRemaining: 10, textColor: ""})
+    this.setState({ secondsRemaining: 10, textColor: "" });
   }
 
   tick() {
