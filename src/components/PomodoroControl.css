@@ -1,0 +1,46 @@
+.pomodoroControls {
+  flex: 1;
+  display: flex;
+}
+
+.pomodoroControls button {
+  outline: none;
+  display: block;
+  margin: 7px 5px 7px 5px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 0 5px #333;
+  color: whitesmoke;
+  transition: 0.2s;
+}
+
+.pomodoroControls button:hover {
+  box-shadow: 0 0 7px #222;
+}
+
+button.btn-pomodoro {
+  background-color: #25703e;
+}
+
+button.btn-pomodoro:hover {
+  background-color: #337549;
+}
+
+button.btn-break {
+  background-color: #b67c00;
+}
+
+button.btn-break:hover {
+  background-color: #b68317;
+}
+
+button.btn-longbreak {
+  background-color: #cc3e1a;
+}
+
+button.btn-longbreak:hover {
+  background-color: #bd4c30;
+}
