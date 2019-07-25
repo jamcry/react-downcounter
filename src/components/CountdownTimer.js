@@ -1,6 +1,8 @@
 import React from "react";
 import CounterControl from "./CounterControl";
 import CounterDisplay from "./CounterDisplay";
+import PomodoroControl from "./PomodoroControl";
+
 import "./CountdownTimer.css";
 export default class CountdownTimer extends React.Component {
   constructor(props) {
@@ -9,10 +11,15 @@ export default class CountdownTimer extends React.Component {
       secondsRemaining: parseInt(this.props.seconds) || 10,
       textColor: ""
     };
+    this.setTimer = this.setTimer.bind(this);
     this.startTimer = this.startTimer.bind(this);
     this.stopTimer = this.stopTimer.bind(this);
     this.resetTimer = this.resetTimer.bind(this);
     this.tick = this.tick.bind(this);
+  }
+
+  setTimer(seconds) {
+    this.setState({ secondsRemaining: seconds });
   }
 
   startTimer() {
@@ -39,6 +46,9 @@ export default class CountdownTimer extends React.Component {
   render() {
     return (
       <div className="countdownClock">
+        <PomodoroControl
+          setTimer={this.setTimer}
+        />
         <CounterDisplay
           seconds={this.state.secondsRemaining}
           color={this.state.textColor}
