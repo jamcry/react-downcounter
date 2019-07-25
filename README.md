@@ -1,4 +1,4 @@
-# React Downcounter
+# ⏱️ React Downcounter
 Downcounter is a simple React countdown timer.
 
 ## Component Hierarchy
